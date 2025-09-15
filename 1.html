@@ -93,7 +93,7 @@
       </div>
 
       <aside class="card profile-img">
-        <img src="https://i.postimg.cc/527cYKLj/5.jpg" alt="Profile image">
+        <img src="https://i.postimg.cc/y8tBx6Mk/5.jpg" alt="Profile image">
         <div style="padding:12px">
           <h3 style="margin:6px 0">Contact</h3>
           <p style="margin:0;color:var(--muted)">Email: <strong>Iqrashahzaad22@gmail.com</strong></p>
@@ -171,7 +171,7 @@
   </main>
 
   <footer>
-    <div class="container">© <span id="year"></span> Your Name — Built with ❤️ • Based on a Cryptical Coder tutorial.</div>
+    <div class="container">© <span id="year"></span> Iqra Shahzad — Built with ❤️.</div>
   </footer>
 
   <script>
@@ -179,20 +179,26 @@
     function scrollToSection(id){
       document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
     }
-    function sendMessage(e){
-      e.preventDefault();
-      const name=document.getElementById('name').value;
-      const email=document.getElementById('email').value;
-      const msg=document.getElementById('message').value;
-      document.getElementById('status').textContent='Thanks '+(name||'there')+', message received (mock).';
-      // In a real site you'd forward this to a server or email service (Formspree, Netlify, Google Sheets, etc.)
-      e.target.reset();
-    }
-    function resetForm(){document.querySelector('form').reset();document.getElementById('status').textContent='';}
+   <form
+  action="https://formspree.io/f/mgvlbkje"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
     document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
+
 
 
 
